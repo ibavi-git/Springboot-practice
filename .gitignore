@@ -1,0 +1,62 @@
+# Build output
+target/
+build/
+out/
+bin/
+*.class
+
+# Maven and Gradle local state
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.gradle/
+
+# Logs
+*.log
+logs/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+application-local.yml
+application-local.yaml
+*.local.properties
+
+# IDE and editor files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test and coverage reports
+surefire-reports/
+failsafe-reports/
+coverage/
+.nyc_output/
+
+# Frontend dependencies and builds, if any practice project adds a UI
+node_modules/
+dist/
+coverage-final.json
+
+# Runtime files
+*.pid
+*.seed
+*.h2.db
+*.mv.db
+*.trace.db
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar

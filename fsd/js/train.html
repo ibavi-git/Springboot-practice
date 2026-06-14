@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>train</title>
+    <script>
+
+        function display(){
+            a = document.getElementById("sname").value;
+            if(a === "3ac"){
+                find1();
+
+            }
+            else{
+                find();
+            }
+        }
+        function find1() {
+            let s = document.getElementById("sno").value;
+            sno = Number(s);
+            if(sno <= 0 || sno > 80){
+                console.log("invalid input");
+                document.getElementById("result").textContent = "invalid input";
+            }
+            else if(sno % 8 ===0){
+                console.log("side upper")
+                document.getElementById("result").textContent = "side upper";
+            }
+            else if(sno % 8 ===1 || sno % 8 ===4){
+                console.log("lower")
+                document.getElementById("result").textContent = "lower";
+            }
+            else if(sno % 8 ===2 || sno % 8 ===5){
+                console.log("middle")
+                document.getElementById("result").textContent = "middle";
+            }
+            else if(sno % 8 ===3 || sno % 8 ===6){
+                console.log("upper")
+                document.getElementById("result").textContent = "upper";
+            }
+            
+            else{
+                console.log("side lower")
+                document.getElementById("result").textContent = "side lower";
+            }
+            
+
+        }
+        function find() {
+            let s = document.getElementById("sno").value;
+            sno = Number(s);
+            if(sno <= 0 || sno > 60){
+                console.log("invalid input");
+                document.getElementById("result").textContent = "invalid input";
+            }
+            else if(sno % 6 ===0){
+                console.log("side upper")
+                document.getElementById("result").textContent = "side upper";
+            }
+            else if(sno % 6 ===1 || sno % 6 ===3){
+                console.log("lower")
+                document.getElementById("result").textContent = "lower";
+            }
+            else if(sno % 6 ===2 || sno % 6 ===4){
+                console.log("middle")
+                document.getElementById("result").textContent = "upper";
+            }
+            
+            else{
+                console.log("side lower")
+                document.getElementById("result").textContent = "side lower";
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="sno">
+    <input type="text" id="sname">
+    <button id = "find()" onclick="display()">find</button>
+    <h1 id="result"></h1>
+  
+</body>
+</html>

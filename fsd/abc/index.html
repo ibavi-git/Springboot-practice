@@ -1,0 +1,186 @@
+
+<html>
+<head>
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header, footer {
+        background-color: lightblue;
+        padding: 20px;
+        text-align: center;
+    }
+    p{
+        font-size: 20px;
+        color: #333;
+    }
+    form input{
+        margin: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        max-width: 1000;
+        border-radius: 5px;
+    }
+    label{
+        font-size: 18px;
+        color: #555;
+    }
+    .form-con{
+        margin: auto;
+        padding: 20px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        width: 400px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .p1{
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: jokerman;
+    }
+    #p1{
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: jokerman;
+    }
+    .container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  background-color: #2cd1d1;
+  justify-content: space-around;
+
+
+    }
+.container div {
+  background-color: #d12c2c;
+  border: 2px solid black;
+  padding: 10px;
+  color: white;
+
+}
+.container-1 {
+  display: flex;
+  background-color: #2cd1d1;
+  justify-content: space-around;
+  
+}
+.container-1 div {
+  background-color: #952cd1;
+  border: 1px solid black;
+    padding: 10px;
+}
+</style>
+<script>
+            // Your JavaScript code here
+            function ci(){
+                alert("Button Clicked!");
+
+            }
+            function play(){
+                alert("Playing the media!");
+            }
+            function add(){
+                var a = 1;
+                var b = 2;
+                let c = a + b;
+                alert(c);
+            }
+            function sub(){
+                var a = 1;
+                var b = 2;
+                let c = a - b;
+                alert(c);
+            }
+            function mul(){
+                var a = 1;
+                var b = 2;
+                let c = a * b;
+                alert(c);
+            }
+            function div(){
+                var a = 1;
+                var b = 2;
+                let c = a / b;
+                alert(c);
+            }
+        </script>
+<body>
+
+    <header>
+        <h1>My Website Header</h1>
+    </header>
+
+    <main>
+        <p class="p1">Your main content goes here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi excepturi temporibus dignissimos iste molestiae laudantium voluptatem, minima laborum cum distinctio voluptas ratione facere earum, reprehenderit quidem. Quas harum dolore ex. </p>
+        <div class="form-con">
+            <form action="">
+            <label>Enter name</label>
+            <input type="text" placeholder="Enter your name"><br><br>
+            <label>Enter email</label>
+            <input type="email" placeholder="Enter your email-id"><br><br>
+            <label>Enter Phone number</label>
+            <input type="tel" placeholder="Enter your number"><br><br>
+            <label>Enter date of birth</label>
+            <input type="date"><br><br>
+            <label>Enter Address</label>
+            <textarea placeholder="Enter your Address"></textarea>
+
+        </form>
+
+        </div>
+        <p id="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, distinctio? Maiores cupiditate omnis atque, quia doloremque id possimus nisi nobis, autem tempore a quibusdam cum, pariatur et fuga unde excepturi!lore
+m ipsum dolor sit amet consectetur adipisicing elit. Modi excepturi temporibus dignissimos iste molestiae laudantium voluptatem, minima laborum cum distinctio voluptas ratione facere earum, reprehenderit quidem. Quas harum dolore ex.
+        </p>
+
+        
+        <button onclick="add()">add</button>
+        <button onclick="sub()">sub</button>
+        <button onclick="mul()">mul</button>
+        <button onclick="div()">div</button>
+
+        <br><br>
+
+
+        <div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+    <div>5</div>
+
+</div>
+<br><br>
+
+   <div class="container-1">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+    <div>5</div>
+
+</div>
+
+
+        
+    </main>
+
+    <footer
+    >
+        <h1>😂😂😂😂&copy; 2026 My Website</h1>
+    </footer>
+
+</body>
+</html>

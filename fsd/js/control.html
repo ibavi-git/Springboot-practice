@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clickevent(){
+            let n = document.getElementById("num").value;
+            let x = Number(n);
+            if(x>= 10 && x < 50){
+                console.log("between 10 and 50");
+                document.getElementById("res").textContent="between 10 and 50"
+            }
+            else if (x > 50 && x <= 100){
+                console.log("Between 50 and 100");
+                document.getElementById("res").textContent="Between 50 and 100"
+            }
+            else if (x >100){
+                console.log("greater than 100");
+                document.getElementById("res").textContent="greater than 100"
+            }
+            else{
+                console.log("less than 10");
+                document.getElementById("res").textContent="less than 10"
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id ="num" placeholder="Enter a number">
+    <button onclick="clickevent()">Click Me</button>
+    <p id = "res"></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hero Academy</title>
+</head>
+<body>
+
+<h1>Marvel Hero Academy</h1>
+
+<h2>Add Hero</h2>
+
+<form id="heroform">
+    Name: <input type="text" id="name" placeholder="Hero Name">
+    Power: <input type="text" id="power" placeholder="Hero Power">
+    <button type="submit">Add</button>
+</form>
+
+<h2>Heroes List</h2>
+
+
+<ul id="heroList"></ul>
+
+<script>
+    const form = document.getElementById("heroform")
+    const list = document.getElementById("heroList")
+
+    fetch("/heroes")
+        .then(res => res.json())
+        .then(data=> data.forEach(h =>addHero()));
+
+    form.addEventListener("submit",e=>{
+        e.preventDefault();
+        const hero={
+            name: document.getElementById("name").value,
+            power: document.getElementById("power").value
+        };
+        fetch("/heroes",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body: JSON.stringify(hero)
+        })
+            .then(res=>res.json())
+            .then(h=>addHero(h));
+        form.reset();
+    });
+
+    function addHero(hero){
+        const li = document.createElement("li");
+        li.textContent=hero.name+"-"+hero.power;
+        list.appendChild(li);
+    }
+
+
+</script>
+
+</body>
+</html>
