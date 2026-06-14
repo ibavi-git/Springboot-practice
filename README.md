@@ -69,18 +69,3 @@ Build output is generated in the `target/` directory and is ignored by Git.
 Some projects use H2 and can run without external database setup. Projects such as `one-one`, `postgresdemo`, and `student-course` expect a local PostgreSQL database. Check each project's `src/main/resources/application.properties` file for the datasource URL, username, port, and database name before running.
 
 Do not commit real database passwords, API keys, or machine-specific configuration. Put local overrides in files such as `application-local.properties` or `.env`, which are ignored by Git.
-
-## Git Notes
-
-This repository ignores generated build files, IDE metadata, logs, local environment files, and database runtime files. Source code, Maven wrapper scripts, project configuration, and learning assets are intended to be tracked.
-
-To initialize and push this folder to GitHub:
-
-```powershell
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin <your-repository-url>
-git push -u origin main
-```
